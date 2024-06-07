@@ -7,7 +7,7 @@ public class SalesServiceTest {
 
     @Test
     public void shouldFindMinSum() {
-        SalesServiceMin service = new SalesServiceMin();
+        SalesAnalysisService service = new SalesAnalysisService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 7, 14, 14, 18};
         int expectedMonth = 8;
         int actualMonth = service.minSales(sales);
@@ -18,7 +18,7 @@ public class SalesServiceTest {
 
     @Test
     public void shouldFindMaxSum() {
-        SalesServiceMax service = new SalesServiceMax();
+        SalesAnalysisService service = new SalesAnalysisService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 7, 14, 14, 18};
         int expectedMonth = 6;
         int actualMonth = service.maxSales(sales);
@@ -27,7 +27,7 @@ public class SalesServiceTest {
 
     @Test
     public void shouldFindSumAll() {
-        SalesServiceSumAll service = new SalesServiceSumAll();
+        SalesAnalysisService service = new SalesAnalysisService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 7, 14, 14, 18};
         int sumAll = 160;
         int actualSum = service.sumSales(sales);
@@ -36,7 +36,7 @@ public class SalesServiceTest {
 
     @Test
     public void shouldFindAverageSum() {
-        SalesServiceAverage service = new SalesServiceAverage();
+        SalesAnalysisService service = new SalesAnalysisService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 7, 14, 14, 18};
         int expectedSum = 14;
         int actualSum = service.averageSum(sales);
@@ -45,7 +45,7 @@ public class SalesServiceTest {
 
     @Test
     public void shouldFindMinBelowAverage() {
-        SalesServiceAverage service = new SalesServiceAverage();
+        SalesAnalysisService service = new SalesAnalysisService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 7, 14, 14, 18};
         int expectedMinBelow = 3;
         int averageSales = service.averageSum(sales);
