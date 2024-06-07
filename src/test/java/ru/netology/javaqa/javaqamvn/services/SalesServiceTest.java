@@ -21,7 +21,7 @@ public class SalesServiceTest {
         SalesAnalysisService service = new SalesAnalysisService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 7, 14, 14, 18};
         long expectedMonth = 6;
-        long actualMonth = service.maxSales(sales);
+        int actualMonth = service.maxSales(sales);
         Assertions.assertEquals(expectedMonth, actualMonth);
     }
 
@@ -49,13 +49,13 @@ public class SalesServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 7, 14, 14, 18};
         long expectedMinBelow = 3;
         long averageSales = service.averageSum(sales);
-        long monthsBelowAverage = service.belowAverage(sales, averageSales);
+        int monthsBelowAverage = service.belowAverage(sales, averageSales);
         Assertions.assertEquals(expectedMinBelow, monthsBelowAverage);
 
     }
 
     @Test
-    public void shouldFindMMaxBelowAverage() {
+    public void shouldFindMaxBelowAverage() {
         SalesAnalysisService service = new SalesAnalysisService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 7, 14, 14, 18};
         long expectedMaxBelow = 6;

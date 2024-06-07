@@ -8,7 +8,7 @@ public class Main {
         long averageSales = service.averageSum(sales);
         System.out.println("Средняя сумма продаж: " + averageSales);
 
-        long monthsBelowAverage = service.belowAverage(sales, averageSales);
+        int monthsBelowAverage = service.belowAverage(sales, averageSales);
         System.out.println("Количество месяцев с продажами ниже среднего: " + monthsBelowAverage);
 
 

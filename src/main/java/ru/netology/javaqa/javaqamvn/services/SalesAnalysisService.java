@@ -1,7 +1,8 @@
 package ru.netology.javaqa.javaqamvn.services;
 
 public class SalesAnalysisService {
-    public long calculateAverage(long[] array) {
+    public long
+    calculateAverage(long[] array) {
         if (array.length == 0) {
             throw new IllegalArgumentException("Array is empty");
         }
@@ -12,7 +13,7 @@ public class SalesAnalysisService {
         return sum / array.length;
     }
 
-    public long countMonthsAboveAverage(long[] array) {
+    public int countMonthsAboveAverage(long[] array) {
         long average = calculateAverage(array);
         int count = 0;
         for (long num : array) {
@@ -31,11 +32,11 @@ public class SalesAnalysisService {
         for (long num : array) {
             sum += num;
         }
-        return (long) sum / array.length;
+        return sum / array.length;
     }
 
-    public long belowAverage(long[] arr, long average) {
-        long count = 0;
+    public int belowAverage(long[] arr, long average) {
+        int count = 0;
         for (long num : arr) {
             if (num < average) {
                 count++;
@@ -54,7 +55,7 @@ public class SalesAnalysisService {
         return sumAll;
     }
 
-    public long maxSales(long[] sales) {
+    public int maxSales(long[] sales) {
         int maxMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
@@ -66,7 +67,7 @@ public class SalesAnalysisService {
         return maxMonth + 1;
     }
 
-    public long minSales(long[] sales) {
+    public int minSales(long[] sales) {
         int minMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
