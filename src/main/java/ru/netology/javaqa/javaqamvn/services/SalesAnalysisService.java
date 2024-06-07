@@ -55,10 +55,10 @@ public class SalesAnalysisService {
     }
 
     public long maxSales(long[] sales) {
-        long maxMonth = 0;
+        int maxMonth = 0;
 
-        for (long i = 0; i < sales.length; i++) {
-            if (sales[(int) i] >= sales[(int) maxMonth]) {
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[ i] >= sales[maxMonth]) {
                 maxMonth = i;
             }
         }
@@ -67,10 +67,10 @@ public class SalesAnalysisService {
     }
 
     public long minSales(long[] sales) {
-        long minMonth = 0;
+        int minMonth = 0;
 
-        for (long i = 0; i < sales.length; i++) {
-            if (sales[(int) i] <= sales[(int) minMonth]) {
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] <= sales[minMonth]) {
                 minMonth = i;
             }
         }
